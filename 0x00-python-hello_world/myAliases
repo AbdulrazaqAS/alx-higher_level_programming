@@ -1,0 +1,9 @@
+#!/bin/bash
+alias a="git add ."
+alias c="git commit -m"
+alias p="git push"
+alias ac='a; c'
+alias gc='gcc -Wall -pedantic -Werror -Wextra -std=gnu89'
+alias bts='./../../Betty/betty-style.pl'
+alias btd='./../../Betty/betty-doc.pl'
+alias val="valgrind --leak-check=full --show-leak-kinds=all"
