@@ -9,6 +9,6 @@ def uppercase(str):
             print('{:c}'.format(ord(str[ch]) - diff), end='')
         else:
             if ch == len(str) - 1:
-                print('{}'.format(str[ch]), end='\n')
+                print(str[ch], end='\n')
                 break
-            print('{}'.format(str[ch]), end='')
+            print(str[ch], end='')
