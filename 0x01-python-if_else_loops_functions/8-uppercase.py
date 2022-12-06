@@ -1,14 +1,8 @@
 #!/usr/bin/python3
 def uppercase(str):
     diff = abs(ord('A') - ord('a'))
-    for ch in range(len(str)):
-        if ord(str[ch]) <= ord('z') and ord(str[ch]) >= ord('a'):
-            if ch == len(str) - 1:
-                print("{:c}".format(ord(str[ch]) - diff), end='\n')
-                break
-            print('{:c}'.format(ord(str[ch]) - diff), end='')
-        else:
-            if ch == len(str) - 1:
-                print(str[ch], end='\n')
-                break
-            print(str[ch], end='')
+    for ch in str:
+        if ord(ch) <= ord('z') and ord(ch) >= ord('a'):
+            ch = chr(ord(ch) - diff);
+        print("{}".format(ch), end='')
+    print()
