@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def uppercase(str):
     diff = abs(ord('A') - ord('a'))
     for ch in range(len(str)):
