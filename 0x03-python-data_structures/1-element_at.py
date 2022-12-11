@@ -5,4 +5,4 @@ def element_at(my_list, idx):
     if idx >= l:
         return None
     return None if my_list[idx] < 0 else\
-            print("Element at index {:d} is {}".format(idx, element_at(my_list, idx)))
+            print("{:d}".format(my_list[idx]))
