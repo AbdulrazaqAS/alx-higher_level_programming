@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
             'L' : 50, 'C' : 100, 'D' : 500, 'M' : 1000}
     res, last = 0, 0
     for i in roman_string:
-    if roman[i] > last:
+        if roman[i] > last:
             res += (roman[i] - last - last)
         else:
             res += roman[i]
