@@ -25,10 +25,8 @@ int is_palindrome(listint_t **head)
 	}
 
 	tmp = *head;
-	if (len == 0)
+	if (len == 0 || len == 1)
 		return (1);
-	if (len % 2 != 0)
-		return (0);
 
 	while (i < len / 2)
 	{
@@ -45,7 +43,7 @@ int is_palindrome(listint_t **head)
 			tmp2 = tmp2->next;
 
 		printf("%d and %d\n", tmp->n, tmp2->n);
-		if (tmp == tmp2)
+		if (tmp->n == tmp2->n)
 		{
 			if (j - i == 1)
 				return (1);
