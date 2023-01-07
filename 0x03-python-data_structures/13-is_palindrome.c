@@ -41,9 +41,10 @@ int is_palindrome(listint_t **head)
 	for (i = 0; i < len / 2; i++)
 	{
 		tmp2 = mid;
-		for (j = len / 2; j < len - i; j++)
+		for (j = len / 2; j < len - 1 - i; j++)
 			tmp2 = tmp2->next;
 
+		printf("%d and %d\n", tmp->n, tmp2->n);
 		if (tmp == tmp2)
 		{
 			if (j - i == 1)
