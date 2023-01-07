@@ -45,6 +45,8 @@ int is_palindrome(listint_t **head)
 		printf("%d and %d\n", tmp->n, tmp2->n);
 		if (tmp->n == tmp2->n)
 		{
+			if (len % 2 != 0 && j - i == 2)
+				return (1);
 			if (j - i == 1)
 				return (1);
 			else
