@@ -1,0 +1,51 @@
+How to use "add_integer(a, b=98)
+It perform an integer addition of the two numbers
+
+>>> add = __import__("0-add_integer")
+
+b is optional - by default it is 98
+>>> add.add_integer(10)
+108
+
+Returns a and b added
+>>> add.add_integer(10, 20)
+30
+
+Cast the numbers to int before adding
+>>> add.add_integer(0.4)
+98
+
+>>> add.add_integer(10.5, -20.3)
+-10
+
+Takes at least argument
+>>> add.add_integer()
+Traceback (innermost last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+Expects both args to be integers or floats
+>>> add.add_integer(10, "hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add.add_integer("hello")
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add.add_integer("hello", "hello")
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add.add_integer(None)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+floats - NaN and infinity
+>>> add.add_integer(float('nan'), 10)
+Traceback (innermost last):
+ValueError: cannot convert float NaN to integer
+
+>>> add.add_integer(float('inf'))
+Traceback (innermost last):
+OverflowError: cannot convert float infinity to integer

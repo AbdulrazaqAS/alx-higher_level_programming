@@ -1,0 +1,26 @@
+Test for "MyList" class and "print_sorted" method
+
+Test for class "MyList(list)"
+
+>>> MyList = __import__("1-my_list").MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.extend([5,4,3,2])
+>>> my_list
+[1, 5, 4, 3, 2]
+
+
+Test for method "print_sorted(self)"
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> my_list[:] = []
+>>> my_list.print_sorted()
+[]
+>>> my_list.append(-1)
+>>> my_list.append(-12)
+>>> my_list.append(15)
+>>> my_list.append(17)
+>>> my_list.print_sorted()
+[-12, -1, 15, 17]
+>>> my_list
+[-1, -12, 15, 17]
